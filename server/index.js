@@ -11,7 +11,13 @@ const dbConnect = require('./config/connect.js');
 dbConnect();
 
 app.use(bodyParser.json({extended : false}));
-app.use(cors());
+app.use(cors(
+  {
+    origin : ["https://social-media-project-api.vercel.app"],
+    methods : ["POST", "GET"],
+    credentials:true
+  }
+));
 app.use(session({
   secret: '$123', // Secret key to sign the session ID cookie
   resave: false, // Don't save session if unmodified
