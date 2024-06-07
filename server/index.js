@@ -12,11 +12,10 @@ dbConnect();
 
 app.use(bodyParser.json({extended : false}));
 app.use(cors(
-  {
-    origin : ["https://social-media-project-api.vercel.app"],
-    methods : ["POST", "GET"],
-    credentials:true
-  }
+ {
+  origin: 'https://social-media-project-six.vercel.app',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
 ));
 app.use(session({
   secret: '$123', // Secret key to sign the session ID cookie
