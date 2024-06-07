@@ -11,7 +11,6 @@ const Profile = () => {
     token: username,
   });
   const [status, setStatus] = useState(true);
-  // https://e49d6eb1-77a3-4dea-8525-77b17ee5a4c9-00-2p11pdap7zn5y.worf.replit.dev:8080/profile
   const dataGetter = async () => {
     const responce = await axios.post(
       "https://social-media-project-api.vercel.app/profile",
