@@ -18,7 +18,7 @@ const LogIn = () => {
   const handelSubmit = async (e) => {
     e.preventDefault();
     try {
-      const responce = await axios.post('https://e49d6eb1-77a3-4dea-8525-77b17ee5a4c9-00-2p11pdap7zn5y.worf.replit.dev:8080/login', userData);
+      const responce = await axios.post('https://social-media-project-api.vercel.app/login', userData);
       if(responce.data.success){
         localStorage.setItem('uid', responce.data.token);
       }
